@@ -1,15 +1,15 @@
-window.onload = function functionAlert(){
-  alert("hello"); //<- alerts hello onload
-}
+// window.onload = function functionAlert(){
+//   alert("hello"); //<- alerts hello onload
+// }
 function pushNumber(event){
   alert(event.target.value);
 }
 const buttonElements = document.querySelectorAll('button.number');
-const calculate = document.querySelectorAll('button.equal-sign');
+const equalsElement = document.querySelectorAll('button.equal-sign');
 
 buttonElements.forEach(function(button){
 button.addEventListener ('click', pushNumber);
-calculate.forEach(function(equalsign){
+equalsElement.forEach(function calculate(equalsign){
 equalsign.addEventListener('click', pushNumber)
 })
 });
@@ -25,3 +25,5 @@ clearElement.forEach(function(clear){
 clear.addEventListener('click', pushOperator);
 })
 });
+let calculation = [''];
+console.log(calculation);
