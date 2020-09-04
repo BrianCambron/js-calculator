@@ -5,8 +5,13 @@ function pushNumber(event){
   alert(event.target.value);
 }
 const buttonElements = document.querySelectorAll('button.number');
+const calculate = document.querySelectorAll('button.equal-sign');
+
 buttonElements.forEach(function(button){
 button.addEventListener ('click', pushNumber);
+calculate.forEach(function(equalsign){
+equalsign.addEventListener('click', pushNumber)
+})
 });
 
 function pushOperator(event){
